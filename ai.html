@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>AI Security | Security Interview Notes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead"><a class="brand" href="index.html"><span aria-hidden="true">S/</span> Security Interview Notes</a></header>
+<main>
+<article>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Study map</a></nav>
+  <h1>AI Security</h1>
+  <section><h2>Quick refresher</h2><p>Track trust across prompts, retrieved documents, model output, and tool calls. Treat external content and generated output as untrusted. Enforce authorization and validate tool arguments outside the model before using them to read or change data.</p></section>
+  <section class="worked"><h2>Worked example</h2><p>A knowledge assistant retrieves files for an employee. Filter retrieval using the employee&#x27;s permissions, allow only narrowly scoped read tools, and require an independent authorization check before a tool accesses a record.</p></section>
+  
+  <section><h2>Interview practice</h2><details><summary>How would you secure a document assistant with access to internal tools?</summary><p>Map data flows and trust boundaries, scope retrieval and tool access to the user, validate requested actions, and test with untrusted content and fake records. Monitor unexpected tool calls and protect sensitive log fields.</p></details></section>
+  <section><h2>Further reading</h2><ul><li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework</a></li></ul></section>
+</article>
+</main>
+</body>
+</html>

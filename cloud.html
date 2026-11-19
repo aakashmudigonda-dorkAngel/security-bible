@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Cloud &amp; Infrastructure Security | Security Interview Notes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead"><a class="brand" href="index.html"><span aria-hidden="true">S/</span> Security Interview Notes</a></header>
+<main>
+<article>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Study map</a></nav>
+  <h1>Cloud &amp; Infrastructure Security</h1>
+  <section><h2>Quick refresher</h2><p>Start with shared responsibility and identify who owns configuration, patching, and monitoring for each service. Use scoped roles and short-lived workload credentials. Review public ingress, data access policies, and cloud control-plane audit logs.</p></section>
+  <section class="worked"><h2>Worked example</h2><p>A report generator needs read access to one storage prefix. Give its workload identity that narrow permission and use logs to confirm which resources it accesses.</p></section>
+  
+  <section><h2>Interview practice</h2><details><summary>How would you reduce the impact of a compromised workload?</summary><p>Limit the workload&#x27;s identity and network reach, isolate environments, prefer short-lived credentials, and monitor privileged actions and unusual data access.</p></details></section>
+  <section><h2>Further reading</h2><ul><li><a href="https://github.com/gracenolan/Notes/blob/master/interview-study-notes-for-security-engineering.md#infrastructure-prod--cloud-virtualisation">Grace Nolan’s interview study notes</a></li></ul></section>
+</article>
+</main>
+</body>
+</html>

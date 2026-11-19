@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Networking | Security Interview Notes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead"><a class="brand" href="index.html"><span aria-hidden="true">S/</span> Security Interview Notes</a></header>
+<main>
+<article>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Study map</a></nav>
+  <h1>Networking</h1>
+  <section><h2>Quick refresher</h2><p>DNS resolves names, IP routes packets, TCP provides an ordered byte stream, and TLS protects application traffic. HTTP then defines the request and response. Identify which system terminates TLS and which network links need separate protection.</p></section>
+  <section class="worked"><h2>Worked example</h2><p>A browser reaches a reverse proxy over HTTPS. The proxy validates the incoming request and opens a separate connection to the application. Restrict the backend to proxy traffic and document where plaintext can exist.</p></section>
+  
+  <section><h2>Interview practice</h2><details><summary>What happens when you open an HTTPS URL?</summary><p>Walk through name resolution, connection establishment, TLS certificate validation and key negotiation, then the HTTP exchange. Mention cached DNS or reused connections if relevant.</p></details></section>
+  <section><h2>Further reading</h2><ul><li><a href="https://github.com/gracenolan/Notes/blob/master/interview-study-notes-for-security-engineering.md#networking">Grace Nolan’s interview study notes</a></li></ul></section>
+</article>
+</main>
+</body>
+</html>

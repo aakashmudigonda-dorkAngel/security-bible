@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Threat Modeling | Security Interview Notes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead"><a class="brand" href="index.html"><span aria-hidden="true">S/</span> Security Interview Notes</a></header>
+<main>
+<article>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Study map</a></nav>
+  <h1>Threat Modeling</h1>
+  <section><h2>Quick refresher</h2><p>Describe assets, actors, entry points, data flows, and where trust changes. Identify plausible threats, prioritize by likelihood and impact, and record mitigations with owners and verification steps.</p></section>
+  <section class="worked"><h2>Worked example</h2><p>For a document-sharing app, draw the browser, API, document store, and identity provider. At the API-to-store boundary, consider whether the authorization policy consistently enforces tenant ownership.</p></section>
+  
+  <section><h2>Interview practice</h2><details><summary>How would you threat model a file-sharing feature in ten minutes?</summary><p>Agree on scope and assets, sketch the data flow, identify trust boundaries, prioritize a few concrete failure scenarios, and propose controls with tests.</p></details></section>
+  <section><h2>Further reading</h2><ul><li><a href="https://github.com/gracenolan/Notes/blob/master/interview-study-notes-for-security-engineering.md#threat-modelling">Grace Nolan’s interview study notes</a></li></ul></section>
+</article>
+</main>
+</body>
+</html>

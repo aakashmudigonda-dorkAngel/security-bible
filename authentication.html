@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Authentication | Security Interview Notes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead"><a class="brand" href="index.html"><span aria-hidden="true">S/</span> Security Interview Notes</a></header>
+<main>
+<article>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Study map</a></nav>
+  <h1>Authentication</h1>
+  <section><h2>Quick refresher</h2><p>Authentication establishes confidence in the identity of a person or workload. A credential proves something at sign-in. A session preserves continuity across requests. Federation delegates sign-in to a trusted identity provider.</p></section>
+  <section class="worked"><h2>Worked example</h2><p>An employee opens an internal expense app. The app starts an OpenID Connect authorization code flow with PKCE. After the identity provider authenticates the employee, the app exchanges the code and validates the ID token before creating an application session.</p><p><a href="access-controls.html">Continue to Access Controls</a></p></section>
+  <section><h2>Protocol and token roles</h2><p>OAuth provides delegated authorization. OpenID Connect adds an identity layer. An ID token carries authentication claims for the client. An access token is presented to the intended resource server. Validate issuer, audience, expiry, and the expected signature using a vetted library. Bind the login flow to the initiating browser using the protocol&#x27;s state and nonce protections as applicable.</p></section><section><h2>Authenticator choices</h2><p>Compare passwords, one-time codes, and passkeys across phishing resistance, deployment, device loss, and recovery. WebAuthn credentials are scoped to a relying party and use public-key authentication. Protect enrollment and recovery because those paths can determine the account&#x27;s effective assurance.</p></section><section><h2>Session lifecycle</h2><p>For a browser-based app, use a random session identifier in a cookie with Secure, HttpOnly, and an appropriate SameSite policy. Rotate it after sign-in or privilege changes, apply expiration, and invalidate server-side sessions on logout or offboarding where required. Keep CSRF protection consistent with the cookie strategy.</p></section><section><h2>Verification</h2><p>Test expired credentials, mismatched issuer or audience, session expiration, reauthentication for sensitive actions, logout, and account recovery. Record sign-in outcomes and administrative changes without logging credentials or tokens.</p></section>
+  <section><h2>Interview practice</h2><details><summary>How would you design sign-in and offboarding for an internal expense app?</summary><p>Use the organization&#x27;s identity provider with phishing-resistant MFA where appropriate. Establish an application session after validating the sign-in result. On departure, disable the identity and revoke relevant app sessions and tokens. Verify how quickly each layer reflects the departure.</p></details><details><summary>Does disabling a user at the identity provider immediately end every app session?</summary><p>It depends on session and token design. A locally validated token may remain usable until expiry. An application session may persist until invalidation or a fresh policy check. Set a revocation target and test it end to end.</p></details></section>
+  <section><h2>Further reading</h2><ul><li><a href="https://github.com/gracenolan/Notes/blob/master/interview-study-notes-for-security-engineering.md#authentication">Grace Nolan’s interview study notes</a></li><li><a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect Core</a></li><li><a href="https://www.w3.org/TR/webauthn-2/">WebAuthn</a></li></ul></section>
+</article>
+</main>
+</body>
+</html>

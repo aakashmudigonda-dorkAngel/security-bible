@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Web Application Security | Security Interview Notes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead"><a class="brand" href="index.html"><span aria-hidden="true">S/</span> Security Interview Notes</a></header>
+<main>
+<article>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Study map</a></nav>
+  <h1>Web Application Security</h1>
+  <section><h2>Quick refresher</h2><p>The browser groups documents by origin, defined by scheme, host, and port. CORS can permit browser scripts to read cross-origin responses. The server still needs to validate input, authorize actions, and protect sensitive state changes.</p></section>
+  <section class="worked"><h2>Worked example</h2><p>For a profile editor, use bound database parameters, context-appropriate output encoding, and server-side ownership checks. For cookie-based sessions, add suitable cookie settings and CSRF protection for state changes.</p></section>
+  
+  <section><h2>Interview practice</h2><details><summary>How would you review a profile update endpoint?</summary><p>Trace inputs to data stores and rendered output. Check session validation, authorization on the target record, CSRF protection, data validation, and tests for rejected updates.</p></details></section>
+  <section><h2>Further reading</h2><ul><li><a href="https://github.com/gracenolan/Notes/blob/master/interview-study-notes-for-security-engineering.md#web-application">Grace Nolan’s interview study notes</a></li></ul></section>
+</article>
+</main>
+</body>
+</html>

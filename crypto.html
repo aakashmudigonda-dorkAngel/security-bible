@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Cryptography Basics | Security Interview Notes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead"><a class="brand" href="index.html"><span aria-hidden="true">S/</span> Security Interview Notes</a></header>
+<main>
+<article>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Study map</a></nav>
+  <h1>Cryptography Basics</h1>
+  <section><h2>Quick refresher</h2><p>Encryption protects confidentiality. Authenticated encryption also detects tampering under the key. A hash produces a digest, a MAC authenticates data to parties with a shared secret, and a signature can be verified using a public key.</p></section>
+  <section class="worked"><h2>Worked example</h2><p>Use a vetted authenticated encryption library for sensitive backups, store keys separately, and test restoration. For password storage, use a salted password hashing function with a calibrated cost.</p></section>
+  
+  <section><h2>Interview practice</h2><details><summary>How would you verify the authenticity of a software update?</summary><p>Verify a digital signature against a trusted signing key or trust chain. Explain how the client obtains trust, how key rotation works, and how rollback is handled.</p></details></section>
+  <section><h2>Further reading</h2><ul><li><a href="https://github.com/gracenolan/Notes/blob/master/interview-study-notes-for-security-engineering.md#cryptography">Grace Nolan’s interview study notes</a></li></ul></section>
+</article>
+</main>
+</body>
+</html>

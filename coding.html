@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Secure Coding &amp; Scripting | Security Interview Notes</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="masthead"><a class="brand" href="index.html"><span aria-hidden="true">S/</span> Security Interview Notes</a></header>
+<main>
+<article>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Study map</a></nav>
+  <h1>Secure Coding &amp; Scripting</h1>
+  <section><h2>Quick refresher</h2><p>Use safe APIs at trust boundaries, validate data against a known schema, and give automation a narrowly scoped identity. Consider retries, partial failures, resource limits, and what gets written to logs.</p></section>
+  <section class="worked"><h2>Worked example</h2><p>For a script that reviews access grants, parse structured input, collect findings without modifying grants, avoid logging credentials, and return a clear status if collection is incomplete.</p></section>
+  
+  <section><h2>Interview practice</h2><details><summary>What would you review before running a maintenance script in production?</summary><p>Inspect its permissions, input validation, logging, retry behavior, and impact on partial failure. Test it against representative data and verify that operators can reconcile changes.</p></details></section>
+  <section><h2>Further reading</h2><ul><li><a href="https://github.com/gracenolan/Notes/blob/master/interview-study-notes-for-security-engineering.md#coding--algorithms">Grace Nolan’s interview study notes</a></li></ul></section>
+</article>
+</main>
+</body>
+</html>
